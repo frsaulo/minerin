@@ -1,5 +1,5 @@
-const url = 'https://ktdgulkppfnjptypgudz.supabase.co/functions/v1/send-contact-email';
-const apiKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imt0ZGd1bGtwcGZuanB0eXBndWR6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzA0MTQ5NjUsImV4cCI6MjA4NTk5MDk2NX0.BwumL4ptUjZhTPX3RMMipiGAvxyzLwDz9o3IXhDOfds';
+const url = 'https://ftzyymtwhpevtczsyjpl.supabase.co/functions/v1/send-contact-email';
+const apiKey = 'sb_publishable_PgcDlFhUHTWyGgAT2H6Fng_Ya3xHDyp';
 
 console.log('Testing connection to:', url);
 
@@ -10,7 +10,14 @@ try {
       'Authorization': `Bearer ${apiKey}`,
       'Content-Type': 'application/json'
     },
-    body: JSON.stringify({})
+    body: JSON.stringify({
+      name: "Teste Teste",
+      email: "teste@example.com",
+      phone: "11999999999",
+      city: "São Paulo",
+      state: "SP",
+      message: "Isso é um teste de envio."
+    })
   });
 
   const data = await response.json();
