@@ -103,9 +103,14 @@ const handler = async (req: Request): Promise<Response> => {
       `,
     });
 
-    console.log("Email sent successfully:", emailResponse);
+    console.log("Email sent response:", emailResponse);
 
-    return new Response(JSON.stringify({ success: true, data: emailResponse }), {
+    if (emailResponse.error) {
+      console.error("Resend API Error:", emailResponse.error);
+      throw new Error(`Erro ao enviar email: ${emailResponse.error.message}`);
+    }
+
+    return new Response(JSON.stringify({ success: true, data: emailResponse.data }), {
       status: 200,
       headers: {
         "Content-Type": "application/json",
