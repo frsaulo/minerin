@@ -1,5 +1,5 @@
-const url = 'https://ftzyymtwhpevtczsyjpl.supabase.co/functions/v1/send-contact-email';
-const apiKey = 'sb_publishable_PgcDlFhUHTWyGgAT2H6Fng_Ya3xHDyp';
+const url = 'https://klnslrowxtdezdrdgszv.supabase.co/functions/v1/send-contact-email';
+const apiKey = 'sb_publishable_dP6ncuIPvEsyWkM9q19-9Q_O_rn7bSs';
 
 console.log('Testing connection to:', url);
 
